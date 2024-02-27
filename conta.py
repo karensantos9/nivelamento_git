@@ -32,15 +32,17 @@ while True:
 
     elif opcao == '2':
         valor_saque = float(input("Digite o valor do saque: "))
-        extratos.append({
-                "tipo": "Saque",
-                "valor": valor_saque,
-                "horario": datetime.now().strftime('%H:%M:%S'),
-                "data": datetime.now().strftime('%Y-%m-%d')
-            })
-        # -----------------------------------------
-        # Desenvolva a lógica da validação do saque
-        # -----------------------------------------
+        if valor_saque >= saldo:
+                saldo = saldo - valor_saque
+                print ("saque aceito")
+                extratos.append({
+                    "tipo": "Saque",
+                    "valor": valor_saque,
+                    "horario": datetime.now().strftime('%H:%M:%S'),
+                    "data": datetime.now().strftime('%Y-%m-%d')
+                })
+        else:
+                print("saque não aceito")
 
     elif opcao == '3':
         print(f'\nExtrato bancário:')
