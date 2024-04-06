@@ -240,7 +240,7 @@ def init():
             while funcao != 5:
 
                 if funcao == 1:
-                    print("\nVocê escolheuuuu a função EXPONENCIAL (a ** x)")
+                    print("\nVocê escolheu a função EXPONENCIAL (a ** x)")
                     a = int(input("digite o valor de a: "))
                     x = int(input("digite o valor do expoente: "))
                     resultadoexpo = exponencial(a,x)
