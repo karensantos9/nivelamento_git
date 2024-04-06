@@ -81,7 +81,7 @@ def linear(x, a, b):
 
 
 def plot_linear(x,a,b):
-        axisX = np.linspace(-10, 10 ,100)
+        axisX = np.linspace(-10, 10,100)
         axisY= linear( axisX ,a,b)
         plt.plot(axisX, axisY, marker= 'o')
         plt.title(f'grafico da função linear')
